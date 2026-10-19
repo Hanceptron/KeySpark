@@ -1,0 +1,28 @@
+% manual table -- authored by hand; provenance cells taken from the cited
+% works' own published descriptions (abstracts and released benchmarks),
+% consulted 2026-08
+\begin{table}[H]
+\caption{Data provenance of input-behaviour bot-detection work published from
+2022 on, against the present study. Scores are deliberately omitted; see the text.}
+\label{tab:related}
+\centering
+\footnotesize
+\begin{adjustwidth}{-\extralength}{0cm}\resizebox{\linewidth}{!}{\begin{tabular}{lllll}
+\toprule
+Work & Data source & Subjects & Automation-class origin & Decision unit \\
+\midrule
+See et al.~\cite{see2024webbots} & web keystroke dynamics & not stated & diffusion-model synthetic keystrokes & keystroke sequence \\
+Niu et al.~\cite{niu2023visual} & mouse movements, login task & 150 & authors' scripted bots & mouse-movement image \\
+Niu et al.~\cite{niu2024lightweight} & mouse movements, login task & 150 & authors' scripted bots & mouse-movement image \\
+Modi et al.~\cite{modi2026comparison} & web-session keystroke and mouse data & not stated & not stated & web request \\
+Acien et al.~\cite{acien2022becaptcha} & mouse trajectories (15{,}000) & 58 & function-based and GAN synthetic (part) & mouse trajectory \\
+Kadel et al.~\cite{kadel2024botracle} & e-commerce traffic, $\sim$40M visits/mo & site visitors & heuristic (cloud IPs, agent/timing) & request and session \\
+This paper & self-collected keyboard and mouse events & 1 & synthetic generator, entirely & one-minute window \\
+\bottomrule
+\end{tabular}}\end{adjustwidth}
+\par\vspace{2pt}\noindent\footnotesize Cells restate what each cited work reports about its own
+data in its published abstract or released benchmark, consulted in August
+2026; ``not stated'' marks details the freely accessible sources do not give.
+Earlier work cited in the text is not listed.
+IP, Internet Protocol; GAN, generative adversarial network.
+\end{table}

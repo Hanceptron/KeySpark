@@ -1,0 +1,834 @@
+{
+  "environment": {
+    "cpu": "Apple M5 Max",
+    "cores": "18",
+    "memory_gb": 128,
+    "os": "Darwin 26.5.2",
+    "python": "3.12.13",
+    "pyspark": "4.1.1",
+    "scikit_learn": "1.8.0"
+  },
+  "repeats": 1,
+  "batch": {
+    "summary": {
+      "events": {
+        "mean": 2962308,
+        "std": 0.0,
+        "runs": [
+          2962308,
+          2962308,
+          2962308
+        ]
+      },
+      "windows": {
+        "mean": 5312,
+        "std": 0.0,
+        "runs": [
+          5312,
+          5312,
+          5312
+        ]
+      },
+      "sessions": {
+        "mean": 255,
+        "std": 0.0,
+        "runs": [
+          255,
+          255,
+          255
+        ]
+      },
+      "read_seconds": {
+        "mean": 1.43,
+        "std": 0.53,
+        "runs": [
+          2.17,
+          1.15,
+          0.97
+        ]
+      },
+      "process_seconds": {
+        "mean": 2.35,
+        "std": 0.34,
+        "runs": [
+          2.83,
+          2.08,
+          2.14
+        ]
+      },
+      "throughput_events_per_sec": {
+        "mean": 1284671.67,
+        "std": 168935.93,
+        "runs": [
+          1046968,
+          1424302,
+          1382745
+        ]
+      }
+    },
+    "runs": [
+      {
+        "events": 2962308,
+        "windows": 5312,
+        "sessions": 255,
+        "read_seconds": 2.17,
+        "process_seconds": 2.83,
+        "throughput_events_per_sec": 1046968
+      },
+      {
+        "events": 2962308,
+        "windows": 5312,
+        "sessions": 255,
+        "read_seconds": 1.15,
+        "process_seconds": 2.08,
+        "throughput_events_per_sec": 1424302
+      },
+      {
+        "events": 2962308,
+        "windows": 5312,
+        "sessions": 255,
+        "read_seconds": 0.97,
+        "process_seconds": 2.14,
+        "throughput_events_per_sec": 1382745
+      }
+    ]
+  },
+  "streaming": {
+    "summary": {
+      "events": {
+        "mean": 2962308,
+        "std": 0.0,
+        "runs": [
+          2962308,
+          2962308,
+          2962308
+        ]
+      },
+      "micro_batches": {
+        "mean": 691,
+        "std": 0.0,
+        "runs": [
+          691,
+          691,
+          691
+        ]
+      },
+      "wall_seconds": {
+        "mean": 108.16,
+        "std": 1.79,
+        "runs": [
+          110.67,
+          106.62,
+          107.2
+        ]
+      },
+      "processing_seconds": {
+        "mean": 107.72,
+        "std": 1.75,
+        "runs": [
+          110.18,
+          106.19,
+          106.8
+        ]
+      },
+      "processed_rows_per_sec": {
+        "mean": 27507,
+        "std": 444.64,
+        "runs": [
+          26885,
+          27898,
+          27738
+        ]
+      },
+      "wall_rows_per_sec": {
+        "mean": 27395,
+        "std": 448.38,
+        "runs": [
+          26767,
+          27785,
+          27633
+        ]
+      },
+      "mean_batch_latency_ms": {
+        "mean": 156,
+        "std": 2.16,
+        "runs": [
+          159,
+          154,
+          155
+        ]
+      },
+      "median_batch_latency_ms": {
+        "mean": 152.33,
+        "std": 2.05,
+        "runs": [
+          155,
+          152,
+          150
+        ]
+      },
+      "max_batch_latency_ms": {
+        "mean": 502.33,
+        "std": 87.8,
+        "runs": [
+          624,
+          463,
+          420
+        ]
+      }
+    },
+    "runs": [
+      {
+        "events": 2962308,
+        "micro_batches": 691,
+        "wall_seconds": 110.67,
+        "processing_seconds": 110.18,
+        "processed_rows_per_sec": 26885,
+        "wall_rows_per_sec": 26767,
+        "mean_batch_latency_ms": 159,
+        "median_batch_latency_ms": 155,
+        "max_batch_latency_ms": 624
+      },
+      {
+        "events": 2962308,
+        "micro_batches": 691,
+        "wall_seconds": 106.62,
+        "processing_seconds": 106.19,
+        "processed_rows_per_sec": 27898,
+        "wall_rows_per_sec": 27785,
+        "mean_batch_latency_ms": 154,
+        "median_batch_latency_ms": 152,
+        "max_batch_latency_ms": 463
+      },
+      {
+        "events": 2962308,
+        "micro_batches": 691,
+        "wall_seconds": 107.2,
+        "processing_seconds": 106.8,
+        "processed_rows_per_sec": 27738,
+        "wall_rows_per_sec": 27633,
+        "mean_batch_latency_ms": 155,
+        "median_batch_latency_ms": 150,
+        "max_batch_latency_ms": 420
+      }
+    ]
+  },
+  "sweep": [
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 1,
+          "std": 0.0,
+          "runs": [
+            1
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 2759,
+          "std": 0.0,
+          "runs": [
+            2759
+          ]
+        },
+        "wall_seconds": {
+          "mean": 479.06,
+          "std": 0.0,
+          "runs": [
+            479.06
+          ]
+        },
+        "processing_seconds": {
+          "mean": 477.86,
+          "std": 0.0,
+          "runs": [
+            477.86
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 6199,
+          "std": 0.0,
+          "runs": [
+            6199
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 6184,
+          "std": 0.0,
+          "runs": [
+            6184
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 173,
+          "std": 0.0,
+          "runs": [
+            173
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 172,
+          "std": 0.0,
+          "runs": [
+            172
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 1823,
+          "std": 0.0,
+          "runs": [
+            1823
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 1,
+          "events": 2962308,
+          "micro_batches": 2759,
+          "wall_seconds": 479.06,
+          "processing_seconds": 477.86,
+          "processed_rows_per_sec": 6199,
+          "wall_rows_per_sec": 6184,
+          "mean_batch_latency_ms": 173,
+          "median_batch_latency_ms": 172,
+          "max_batch_latency_ms": 1823
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 2,
+          "std": 0.0,
+          "runs": [
+            2
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 1380,
+          "std": 0.0,
+          "runs": [
+            1380
+          ]
+        },
+        "wall_seconds": {
+          "mean": 223.16,
+          "std": 0.0,
+          "runs": [
+            223.16
+          ]
+        },
+        "processing_seconds": {
+          "mean": 222.52,
+          "std": 0.0,
+          "runs": [
+            222.52
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 13312,
+          "std": 0.0,
+          "runs": [
+            13312
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 13274,
+          "std": 0.0,
+          "runs": [
+            13274
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 161,
+          "std": 0.0,
+          "runs": [
+            161
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 162,
+          "std": 0.0,
+          "runs": [
+            162
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 362,
+          "std": 0.0,
+          "runs": [
+            362
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 2,
+          "events": 2962308,
+          "micro_batches": 1380,
+          "wall_seconds": 223.16,
+          "processing_seconds": 222.52,
+          "processed_rows_per_sec": 13312,
+          "wall_rows_per_sec": 13274,
+          "mean_batch_latency_ms": 161,
+          "median_batch_latency_ms": 162,
+          "max_batch_latency_ms": 362
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 4,
+          "std": 0.0,
+          "runs": [
+            4
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 691,
+          "std": 0.0,
+          "runs": [
+            691
+          ]
+        },
+        "wall_seconds": {
+          "mean": 105.26,
+          "std": 0.0,
+          "runs": [
+            105.26
+          ]
+        },
+        "processing_seconds": {
+          "mean": 104.92,
+          "std": 0.0,
+          "runs": [
+            104.92
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 28235,
+          "std": 0.0,
+          "runs": [
+            28235
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 28142,
+          "std": 0.0,
+          "runs": [
+            28142
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 152,
+          "std": 0.0,
+          "runs": [
+            152
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 149,
+          "std": 0.0,
+          "runs": [
+            149
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 441,
+          "std": 0.0,
+          "runs": [
+            441
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 4,
+          "events": 2962308,
+          "micro_batches": 691,
+          "wall_seconds": 105.26,
+          "processing_seconds": 104.92,
+          "processed_rows_per_sec": 28235,
+          "wall_rows_per_sec": 28142,
+          "mean_batch_latency_ms": 152,
+          "median_batch_latency_ms": 149,
+          "max_batch_latency_ms": 441
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 8,
+          "std": 0.0,
+          "runs": [
+            8
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 346,
+          "std": 0.0,
+          "runs": [
+            346
+          ]
+        },
+        "wall_seconds": {
+          "mean": 52.1,
+          "std": 0.0,
+          "runs": [
+            52.1
+          ]
+        },
+        "processing_seconds": {
+          "mean": 51.99,
+          "std": 0.0,
+          "runs": [
+            51.99
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 56974,
+          "std": 0.0,
+          "runs": [
+            56974
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 56862,
+          "std": 0.0,
+          "runs": [
+            56862
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 150,
+          "std": 0.0,
+          "runs": [
+            150
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 148,
+          "std": 0.0,
+          "runs": [
+            148
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 344,
+          "std": 0.0,
+          "runs": [
+            344
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 8,
+          "events": 2962308,
+          "micro_batches": 346,
+          "wall_seconds": 52.1,
+          "processing_seconds": 51.99,
+          "processed_rows_per_sec": 56974,
+          "wall_rows_per_sec": 56862,
+          "mean_batch_latency_ms": 150,
+          "median_batch_latency_ms": 148,
+          "max_batch_latency_ms": 344
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 16,
+          "std": 0.0,
+          "runs": [
+            16
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 174,
+          "std": 0.0,
+          "runs": [
+            174
+          ]
+        },
+        "wall_seconds": {
+          "mean": 26.87,
+          "std": 0.0,
+          "runs": [
+            26.87
+          ]
+        },
+        "processing_seconds": {
+          "mean": 26.73,
+          "std": 0.0,
+          "runs": [
+            26.73
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 110815,
+          "std": 0.0,
+          "runs": [
+            110815
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 110253,
+          "std": 0.0,
+          "runs": [
+            110253
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 154,
+          "std": 0.0,
+          "runs": [
+            154
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 148,
+          "std": 0.0,
+          "runs": [
+            148
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 354,
+          "std": 0.0,
+          "runs": [
+            354
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 16,
+          "events": 2962308,
+          "micro_batches": 174,
+          "wall_seconds": 26.87,
+          "processing_seconds": 26.73,
+          "processed_rows_per_sec": 110815,
+          "wall_rows_per_sec": 110253,
+          "mean_batch_latency_ms": 154,
+          "median_batch_latency_ms": 148,
+          "max_batch_latency_ms": 354
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 32,
+          "std": 0.0,
+          "runs": [
+            32
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 88,
+          "std": 0.0,
+          "runs": [
+            88
+          ]
+        },
+        "wall_seconds": {
+          "mean": 13.91,
+          "std": 0.0,
+          "runs": [
+            13.91
+          ]
+        },
+        "processing_seconds": {
+          "mean": 13.8,
+          "std": 0.0,
+          "runs": [
+            13.8
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 214598,
+          "std": 0.0,
+          "runs": [
+            214598
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 212980,
+          "std": 0.0,
+          "runs": [
+            212980
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 157,
+          "std": 0.0,
+          "runs": [
+            157
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 151,
+          "std": 0.0,
+          "runs": [
+            151
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 360,
+          "std": 0.0,
+          "runs": [
+            360
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 32,
+          "events": 2962308,
+          "micro_batches": 88,
+          "wall_seconds": 13.91,
+          "processing_seconds": 13.8,
+          "processed_rows_per_sec": 214598,
+          "wall_rows_per_sec": 212980,
+          "mean_batch_latency_ms": 157,
+          "median_batch_latency_ms": 151,
+          "max_batch_latency_ms": 360
+        }
+      ]
+    },
+    {
+      "summary": {
+        "max_files_per_trigger": {
+          "mean": 64,
+          "std": 0.0,
+          "runs": [
+            64
+          ]
+        },
+        "events": {
+          "mean": 2962308,
+          "std": 0.0,
+          "runs": [
+            2962308
+          ]
+        },
+        "micro_batches": {
+          "mean": 45,
+          "std": 0.0,
+          "runs": [
+            45
+          ]
+        },
+        "wall_seconds": {
+          "mean": 11.41,
+          "std": 0.0,
+          "runs": [
+            11.41
+          ]
+        },
+        "processing_seconds": {
+          "mean": 11.32,
+          "std": 0.0,
+          "runs": [
+            11.32
+          ]
+        },
+        "processed_rows_per_sec": {
+          "mean": 261711,
+          "std": 0.0,
+          "runs": [
+            261711
+          ]
+        },
+        "wall_rows_per_sec": {
+          "mean": 259613,
+          "std": 0.0,
+          "runs": [
+            259613
+          ]
+        },
+        "mean_batch_latency_ms": {
+          "mean": 252,
+          "std": 0.0,
+          "runs": [
+            252
+          ]
+        },
+        "median_batch_latency_ms": {
+          "mean": 250,
+          "std": 0.0,
+          "runs": [
+            250
+          ]
+        },
+        "max_batch_latency_ms": {
+          "mean": 561,
+          "std": 0.0,
+          "runs": [
+            561
+          ]
+        }
+      },
+      "runs": [
+        {
+          "max_files_per_trigger": 64,
+          "events": 2962308,
+          "micro_batches": 45,
+          "wall_seconds": 11.41,
+          "processing_seconds": 11.32,
+          "processed_rows_per_sec": 261711,
+          "wall_rows_per_sec": 259613,
+          "mean_batch_latency_ms": 252,
+          "median_batch_latency_ms": 250,
+          "max_batch_latency_ms": 561
+        }
+      ]
+    }
+  ]
+}

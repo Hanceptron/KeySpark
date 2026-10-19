@@ -1,0 +1,105 @@
+{
+ "step_px_max": 10,
+ "released": {
+  "rules": {
+   "step_cv_zero": {
+    "kind_stratified_f1": 0.8042921558,
+    "loko_mean_f1": 0.7371275946
+   },
+   "no_movement": {
+    "kind_stratified_f1": 0.4516597516,
+    "loko_mean_f1": 0.3787106843
+   }
+  },
+  "step_cv_zero": 631,
+  "zero_no_movement": 273,
+  "zero_single_step": 79,
+  "zero_constant_steps": 279,
+  "synthetic_windows": 645,
+  "step_cv_zero_share": 0.9782945736,
+  "step_cv_median": 0.0,
+  "pooled_f1": 0.9882907746,
+  "pooled_f1_ci95": [
+   0.9793341979,
+   0.99620405
+  ],
+  "pooled_auc": 0.9995459306,
+  "recall": {
+   "jiggler": 1.0,
+   "typer": 0.9906103286,
+   "keep_awake": 1.0,
+   "clicker": 0.9725118483
+  },
+  "loko_fixed_mean_f1": 0.4590711285,
+  "loko_budget1_mean_f1": 0.7822841824,
+  "loko_fixed_f1": {
+   "jiggler": 1.0,
+   "typer": 0.0,
+   "keep_awake": 0.387755102,
+   "clicker": 0.4485294118
+  },
+  "loko_budget1_f1": {
+   "jiggler": 0.9793103448,
+   "typer": 0.8962025316,
+   "keep_awake": 0.3486238532,
+   "clicker": 0.905
+  },
+  "loko_auc": {
+   "jiggler": 1.0,
+   "typer": 0.9940194417,
+   "keep_awake": 0.9685513945,
+   "clicker": 0.9944740516
+  }
+ },
+ "random_step": {
+  "rules": {
+   "step_cv_zero": {
+    "kind_stratified_f1": 0.5469479959,
+    "loko_mean_f1": 0.4508888217
+   },
+   "no_movement": {
+    "kind_stratified_f1": 0.4516597516,
+    "loko_mean_f1": 0.3787106843
+   }
+  },
+  "step_cv_zero": 354,
+  "zero_no_movement": 273,
+  "zero_single_step": 79,
+  "zero_constant_steps": 2,
+  "synthetic_windows": 645,
+  "step_cv_zero_share": 0.5488372093,
+  "step_cv_median": 0.0,
+  "pooled_f1": 0.9848207133,
+  "pooled_f1_ci95": [
+   0.9744061677,
+   0.9932039671
+  ],
+  "pooled_auc": 0.9996429945,
+  "recall": {
+   "jiggler": 1.0,
+   "typer": 0.9849765258,
+   "keep_awake": 1.0,
+   "clicker": 0.971563981
+  },
+  "loko_fixed_mean_f1": 0.4393406117,
+  "loko_budget1_mean_f1": 0.7416949165,
+  "loko_fixed_f1": {
+   "jiggler": 0.9675090253,
+   "typer": 0.0,
+   "keep_awake": 0.3838383838,
+   "clicker": 0.4060150376
+  },
+  "loko_budget1_f1": {
+   "jiggler": 0.9826989619,
+   "typer": 0.738372093,
+   "keep_awake": 0.358490566,
+   "clicker": 0.8872180451
+  },
+  "loko_auc": {
+   "jiggler": 0.999276781,
+   "typer": 0.989626556,
+   "keep_awake": 0.9670413362,
+   "clicker": 0.9904402077
+  }
+ }
+}

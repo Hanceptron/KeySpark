@@ -1,0 +1,881 @@
+{
+  "spec_bound_s": 65,
+  "host_context_start": {
+    "spark_jvms": 1,
+    "lab_brokers": [
+      "keyspark-lab-lat"
+    ]
+  },
+  "host_context_end": {
+    "spark_jvms": 1,
+    "lab_brokers": [
+      "keyspark-lab-lat"
+    ]
+  },
+  "probes": [
+    {
+      "user": "probe-000",
+      "sent": 1792363449.288838,
+      "second_of_minute": 9.288837909698486,
+      "latency_s": 111.58426427841187,
+      "latency_file_mtime_s": 111.419917345047
+    },
+    {
+      "user": "probe-001",
+      "sent": 1792363457.270752,
+      "second_of_minute": 17.270751953125,
+      "latency_s": 103.60132884979248,
+      "latency_file_mtime_s": 103.43803668022156
+    },
+    {
+      "user": "probe-002",
+      "sent": 1792363474.312738,
+      "second_of_minute": 34.31273794174194,
+      "latency_s": 86.56036424636841,
+      "latency_file_mtime_s": 86.39601731300354
+    },
+    {
+      "user": "probe-003",
+      "sent": 1792363484.3730009,
+      "second_of_minute": 44.37300086021423,
+      "latency_s": 76.49815917015076,
+      "latency_file_mtime_s": 76.33377122879028
+    },
+    {
+      "user": "probe-004",
+      "sent": 1792363489.134805,
+      "second_of_minute": 49.13480496406555,
+      "latency_s": 71.73727583885193,
+      "latency_file_mtime_s": 71.573983669281
+    },
+    {
+      "user": "probe-005",
+      "sent": 1792363511.7137809,
+      "second_of_minute": 11.713780879974365,
+      "latency_s": 109.01243019104004,
+      "latency_file_mtime_s": 108.97574424743652
+    },
+    {
+      "user": "probe-006",
+      "sent": 1792363521.1349728,
+      "second_of_minute": 21.13497281074524,
+      "latency_s": 99.5918071269989,
+      "latency_file_mtime_s": 99.55369305610657
+    },
+    {
+      "user": "probe-007",
+      "sent": 1792363533.4419599,
+      "second_of_minute": 33.441959857940674,
+      "latency_s": 87.28531312942505,
+      "latency_file_mtime_s": 87.24788475036621
+    },
+    {
+      "user": "probe-008",
+      "sent": 1792363537.546529,
+      "second_of_minute": 37.546529054641724,
+      "latency_s": 83.17968201637268,
+      "latency_file_mtime_s": 83.14299607276917
+    },
+    {
+      "user": "probe-009",
+      "sent": 1792363553.4137092,
+      "second_of_minute": 53.41370916366577,
+      "latency_s": 67.31307077407837,
+      "latency_file_mtime_s": 67.27495670318604
+    },
+    {
+      "user": "probe-010",
+      "sent": 1792363564.455279,
+      "second_of_minute": 4.455279111862183,
+      "latency_s": 116.42125391960144,
+      "latency_file_mtime_s": 116.23835682868958
+    },
+    {
+      "user": "probe-011",
+      "sent": 1792363583.127647,
+      "second_of_minute": 23.127646923065186,
+      "latency_s": 97.74888610839844,
+      "latency_file_mtime_s": 97.56598901748657
+    },
+    {
+      "user": "probe-012",
+      "sent": 1792363591.7336571,
+      "second_of_minute": 31.733657121658325,
+      "latency_s": 89.14226794242859,
+      "latency_file_mtime_s": 88.95990180969238
+    },
+    {
+      "user": "probe-013",
+      "sent": 1792363605.8779259,
+      "second_of_minute": 45.877925872802734,
+      "latency_s": 74.9969711303711,
+      "latency_file_mtime_s": 74.81646203994751
+    },
+    {
+      "user": "probe-014",
+      "sent": 1792363613.323296,
+      "second_of_minute": 53.32329607009888,
+      "latency_s": 67.5536949634552,
+      "latency_file_mtime_s": 67.3704948425293
+    },
+    {
+      "user": "probe-015",
+      "sent": 1792363622.728773,
+      "second_of_minute": 2.7287731170654297,
+      "latency_s": 117.975594997406,
+      "latency_file_mtime_s": 117.96875190734863
+    },
+    {
+      "user": "probe-016",
+      "sent": 1792363638.6636841,
+      "second_of_minute": 18.663684129714966,
+      "latency_s": 102.03963804244995,
+      "latency_file_mtime_s": 102.03174161911011
+    },
+    {
+      "user": "probe-017",
+      "sent": 1792363644.774855,
+      "second_of_minute": 24.77485489845276,
+      "latency_s": 95.92769002914429,
+      "latency_file_mtime_s": 95.92290091514587
+    },
+    {
+      "user": "probe-018",
+      "sent": 1792363665.941625,
+      "second_of_minute": 45.941625118255615,
+      "latency_s": 74.76223492622375,
+      "latency_file_mtime_s": 74.75238180160522
+    },
+    {
+      "user": "probe-019",
+      "sent": 1792363675.581595,
+      "second_of_minute": 55.581594944000244,
+      "latency_s": 65.12226510047913,
+      "latency_file_mtime_s": 65.1124119758606
+    },
+    {
+      "user": "probe-020",
+      "sent": 1792363689.1026921,
+      "second_of_minute": 9.102692127227783,
+      "latency_s": 111.64628672599792,
+      "latency_file_mtime_s": 111.59755992889404
+    },
+    {
+      "user": "probe-021",
+      "sent": 1792363696.261895,
+      "second_of_minute": 16.261894941329956,
+      "latency_s": 104.48708391189575,
+      "latency_file_mtime_s": 104.43835711479187
+    },
+    {
+      "user": "probe-022",
+      "sent": 1792363715.657556,
+      "second_of_minute": 35.65755605697632,
+      "latency_s": 85.09066581726074,
+      "latency_file_mtime_s": 85.04264163970947
+    },
+    {
+      "user": "probe-023",
+      "sent": 1792363726.7196748,
+      "second_of_minute": 46.719674825668335,
+      "latency_s": 74.02982497215271,
+      "latency_file_mtime_s": 73.9807391166687
+    },
+    {
+      "user": "probe-024",
+      "sent": 1792363737.350658,
+      "second_of_minute": 57.35065793991089,
+      "latency_s": 63.398841857910156,
+      "latency_file_mtime_s": 63.34975600242615
+    },
+    {
+      "user": "probe-025",
+      "sent": 1792363742.336271,
+      "second_of_minute": 2.336271047592163,
+      "latency_s": 118.03715586662292,
+      "latency_file_mtime_s": 117.83685421943665
+    },
+    {
+      "user": "probe-026",
+      "sent": 1792363757.60818,
+      "second_of_minute": 17.608180046081543,
+      "latency_s": 102.76524686813354,
+      "latency_file_mtime_s": 102.56494522094727
+    },
+    {
+      "user": "probe-027",
+      "sent": 1792363764.528264,
+      "second_of_minute": 24.528264045715332,
+      "latency_s": 95.84516286849976,
+      "latency_file_mtime_s": 95.64486122131348
+    },
+    {
+      "user": "probe-028",
+      "sent": 1792363777.858565,
+      "second_of_minute": 37.85856509208679,
+      "latency_s": 82.51611304283142,
+      "latency_file_mtime_s": 82.31765246391296
+    },
+    {
+      "user": "probe-029",
+      "sent": 1792363796.200994,
+      "second_of_minute": 56.20099401473999,
+      "latency_s": 64.17446208000183,
+      "latency_file_mtime_s": 63.97505450248718
+    },
+    {
+      "user": "probe-030",
+      "sent": 1792363808.9459379,
+      "second_of_minute": 8.945937871932983,
+      "latency_s": 111.58322095870972,
+      "latency_file_mtime_s": 111.46553778648376
+    },
+    {
+      "user": "probe-031",
+      "sent": 1792363823.6201868,
+      "second_of_minute": 23.620186805725098,
+      "latency_s": 96.90812015533447,
+      "latency_file_mtime_s": 96.78987956047058
+    },
+    {
+      "user": "probe-032",
+      "sent": 1792363827.9188302,
+      "second_of_minute": 27.918830156326294,
+      "latency_s": 92.60947680473328,
+      "latency_file_mtime_s": 92.49123620986938
+    },
+    {
+      "user": "probe-033",
+      "sent": 1792363840.454817,
+      "second_of_minute": 40.454817056655884,
+      "latency_s": 80.07348990440369,
+      "latency_file_mtime_s": 79.9552493095398
+    },
+    {
+      "user": "probe-034",
+      "sent": 1792363853.638315,
+      "second_of_minute": 53.638314962387085,
+      "latency_s": 66.89084386825562,
+      "latency_file_mtime_s": 66.77316069602966
+    },
+    {
+      "user": "probe-035",
+      "sent": 1792363862.28127,
+      "second_of_minute": 2.2812700271606445,
+      "latency_s": 118.6397807598114,
+      "latency_file_mtime_s": 118.41481804847717
+    },
+    {
+      "user": "probe-036",
+      "sent": 1792363873.569109,
+      "second_of_minute": 13.569108963012695,
+      "latency_s": 107.35045886039734,
+      "latency_file_mtime_s": 107.12691044807434
+    },
+    {
+      "user": "probe-037",
+      "sent": 1792363889.7088158,
+      "second_of_minute": 29.708815813064575,
+      "latency_s": 91.20951819419861,
+      "latency_file_mtime_s": 90.98687624931335
+    },
+    {
+      "user": "probe-038",
+      "sent": 1792363898.732787,
+      "second_of_minute": 38.732786893844604,
+      "latency_s": 82.18763494491577,
+      "latency_file_mtime_s": 81.96344661712646
+    },
+    {
+      "user": "probe-039",
+      "sent": 1792363916.045384,
+      "second_of_minute": 56.0453839302063,
+      "latency_s": 64.87566685676575,
+      "latency_file_mtime_s": 64.65070414543152
+    },
+    {
+      "user": "probe-040",
+      "sent": 1792363925.2550778,
+      "second_of_minute": 5.255077838897705,
+      "latency_s": 115.49859118461609,
+      "latency_file_mtime_s": 115.44049453735352
+    },
+    {
+      "user": "probe-041",
+      "sent": 1792363942.0013921,
+      "second_of_minute": 22.001392126083374,
+      "latency_s": 98.75121283531189,
+      "latency_file_mtime_s": 98.69514226913452
+    },
+    {
+      "user": "probe-042",
+      "sent": 1792363952.407806,
+      "second_of_minute": 32.40780591964722,
+      "latency_s": 88.34540605545044,
+      "latency_file_mtime_s": 88.28876614570618
+    },
+    {
+      "user": "probe-043",
+      "sent": 1792363959.7584598,
+      "second_of_minute": 39.75845980644226,
+      "latency_s": 80.994145154953,
+      "latency_file_mtime_s": 80.93807458877563
+    },
+    {
+      "user": "probe-044",
+      "sent": 1792363977.989612,
+      "second_of_minute": 57.989612102508545,
+      "latency_s": 62.76299285888672,
+      "latency_file_mtime_s": 62.70692229270935
+    },
+    {
+      "user": "probe-045",
+      "sent": 1792363989.662246,
+      "second_of_minute": 9.662245988845825,
+      "latency_s": 110.63432002067566,
+      "latency_file_mtime_s": 110.52366805076599
+    },
+    {
+      "user": "probe-046",
+      "sent": 1792363996.651825,
+      "second_of_minute": 16.651824951171875,
+      "latency_s": 103.64390802383423,
+      "latency_file_mtime_s": 103.53414487838745
+    },
+    {
+      "user": "probe-047",
+      "sent": 1792364007.460185,
+      "second_of_minute": 27.460185050964355,
+      "latency_s": 92.83830189704895,
+      "latency_file_mtime_s": 92.72572541236877
+    },
+    {
+      "user": "probe-048",
+      "sent": 1792364024.192496,
+      "second_of_minute": 44.19249606132507,
+      "latency_s": 76.10406994819641,
+      "latency_file_mtime_s": 75.99341797828674
+    },
+    {
+      "user": "probe-049",
+      "sent": 1792364029.687145,
+      "second_of_minute": 49.68714499473572,
+      "latency_s": 70.610524892807,
+      "latency_file_mtime_s": 70.498770236969
+    },
+    {
+      "user": "probe-050",
+      "sent": 1792364042.41085,
+      "second_of_minute": 2.4108500480651855,
+      "latency_s": 117.99682784080505,
+      "latency_file_mtime_s": 117.87506341934204
+    },
+    {
+      "user": "probe-051",
+      "sent": 1792364052.088783,
+      "second_of_minute": 12.088783025741577,
+      "latency_s": 108.31973004341125,
+      "latency_file_mtime_s": 108.19769334793091
+    },
+    {
+      "user": "probe-052",
+      "sent": 1792364073.449902,
+      "second_of_minute": 33.449902057647705,
+      "latency_s": 86.95777583122253,
+      "latency_file_mtime_s": 86.83601140975952
+    },
+    {
+      "user": "probe-053",
+      "sent": 1792364083.983934,
+      "second_of_minute": 43.98393392562866,
+      "latency_s": 76.42457914352417,
+      "latency_file_mtime_s": 76.30254244804382
+    },
+    {
+      "user": "probe-054",
+      "sent": 1792364096.470268,
+      "second_of_minute": 56.47026801109314,
+      "latency_s": 63.9374098777771,
+      "latency_file_mtime_s": 63.81564545631409
+    },
+    {
+      "user": "probe-055",
+      "sent": 1792364109.376579,
+      "second_of_minute": 9.37657904624939,
+      "latency_s": 111.43065404891968,
+      "latency_file_mtime_s": 111.31566333770752
+    },
+    {
+      "user": "probe-056",
+      "sent": 1792364117.510466,
+      "second_of_minute": 17.5104660987854,
+      "latency_s": 103.29676699638367,
+      "latency_file_mtime_s": 103.18177628517151
+    },
+    {
+      "user": "probe-057",
+      "sent": 1792364130.834919,
+      "second_of_minute": 30.834918975830078,
+      "latency_s": 89.97351002693176,
+      "latency_file_mtime_s": 89.85761165618896
+    },
+    {
+      "user": "probe-058",
+      "sent": 1792364137.686316,
+      "second_of_minute": 37.68631601333618,
+      "latency_s": 83.12211298942566,
+      "latency_file_mtime_s": 83.00621461868286
+    },
+    {
+      "user": "probe-059",
+      "sent": 1792364149.3788328,
+      "second_of_minute": 49.37883281707764,
+      "latency_s": 71.42840027809143,
+      "latency_file_mtime_s": 71.31340956687927
+    },
+    {
+      "user": "probe-060",
+      "sent": 1792364168.027473,
+      "second_of_minute": 8.027472972869873,
+      "latency_s": 112.67653703689575,
+      "latency_file_mtime_s": 112.65506958961487
+    },
+    {
+      "user": "probe-061",
+      "sent": 1792364177.654335,
+      "second_of_minute": 17.654335021972656,
+      "latency_s": 103.04967498779297,
+      "latency_file_mtime_s": 103.02820754051208
+    },
+    {
+      "user": "probe-062",
+      "sent": 1792364190.792758,
+      "second_of_minute": 30.792757987976074,
+      "latency_s": 89.91207504272461,
+      "latency_file_mtime_s": 89.88910603523254
+    },
+    {
+      "user": "probe-063",
+      "sent": 1792364205.181101,
+      "second_of_minute": 45.18110108375549,
+      "latency_s": 75.52223801612854,
+      "latency_file_mtime_s": 75.50076746940613
+    },
+    {
+      "user": "probe-064",
+      "sent": 1792364215.623915,
+      "second_of_minute": 55.62391495704651,
+      "latency_s": 65.08091807365417,
+      "latency_file_mtime_s": 65.05794906616211
+    },
+    {
+      "user": "probe-065",
+      "sent": 1792364226.645301,
+      "second_of_minute": 6.645301103591919,
+      "latency_s": 114.04919385910034,
+      "latency_file_mtime_s": 114.02773308753967
+    },
+    {
+      "user": "probe-066",
+      "sent": 1792364238.7176378,
+      "second_of_minute": 18.71763777732849,
+      "latency_s": 101.97685718536377,
+      "latency_file_mtime_s": 101.9553964138031
+    },
+    {
+      "user": "probe-067",
+      "sent": 1792364247.6570492,
+      "second_of_minute": 27.65704917907715,
+      "latency_s": 93.03793978691101,
+      "latency_file_mtime_s": 93.01899576187134
+    },
+    {
+      "user": "probe-068",
+      "sent": 1792364256.378247,
+      "second_of_minute": 36.378247022628784,
+      "latency_s": 84.31721687316895,
+      "latency_file_mtime_s": 84.29477643966675
+    },
+    {
+      "user": "probe-069",
+      "sent": 1792364273.2451909,
+      "second_of_minute": 53.24519085884094,
+      "latency_s": 67.44979810714722,
+      "latency_file_mtime_s": 67.43085408210754
+    },
+    {
+      "user": "probe-070",
+      "sent": 1792364282.58289,
+      "second_of_minute": 2.582890033721924,
+      "latency_s": 117.76317095756531,
+      "latency_file_mtime_s": 117.606290102005
+    },
+    {
+      "user": "probe-071",
+      "sent": 1792364296.905517,
+      "second_of_minute": 16.905517101287842,
+      "latency_s": 103.43929290771484,
+      "latency_file_mtime_s": 103.28319644927979
+    },
+    {
+      "user": "probe-072",
+      "sent": 1792364314.250174,
+      "second_of_minute": 34.250174045562744,
+      "latency_s": 86.09463596343994,
+      "latency_file_mtime_s": 85.93853950500488
+    },
+    {
+      "user": "probe-073",
+      "sent": 1792364318.812247,
+      "second_of_minute": 38.81224703788757,
+      "latency_s": 81.53325009346008,
+      "latency_file_mtime_s": 81.37685894966125
+    },
+    {
+      "user": "probe-074",
+      "sent": 1792364328.701164,
+      "second_of_minute": 48.70116400718689,
+      "latency_s": 71.64268398284912,
+      "latency_file_mtime_s": 71.48800945281982
+    },
+    {
+      "user": "probe-075",
+      "sent": 1792364343.3776882,
+      "second_of_minute": 3.37768816947937,
+      "latency_s": 117.06134080886841,
+      "latency_file_mtime_s": 116.82167792320251
+    },
+    {
+      "user": "probe-076",
+      "sent": 1792364355.532634,
+      "second_of_minute": 15.532634019851685,
+      "latency_s": 104.90419387817383,
+      "latency_file_mtime_s": 104.66679048538208
+    },
+    {
+      "user": "probe-077",
+      "sent": 1792364371.951522,
+      "second_of_minute": 31.9515221118927,
+      "latency_s": 88.48650789260864,
+      "latency_file_mtime_s": 88.24753832817078
+    },
+    {
+      "user": "probe-078",
+      "sent": 1792364382.694446,
+      "second_of_minute": 42.694446086883545,
+      "latency_s": 77.7435839176178,
+      "latency_file_mtime_s": 77.50461435317993
+    },
+    {
+      "user": "probe-079",
+      "sent": 1792364397.409887,
+      "second_of_minute": 57.409887075424194,
+      "latency_s": 63.02814292907715,
+      "latency_file_mtime_s": 62.78917336463928
+    },
+    {
+      "user": "probe-080",
+      "sent": 1792364407.974244,
+      "second_of_minute": 7.974244117736816,
+      "latency_s": 112.36625790596008,
+      "latency_file_mtime_s": 112.19768500328064
+    },
+    {
+      "user": "probe-081",
+      "sent": 1792364416.8791292,
+      "second_of_minute": 16.87912917137146,
+      "latency_s": 103.4597818851471,
+      "latency_file_mtime_s": 103.29181671142578
+    },
+    {
+      "user": "probe-082",
+      "sent": 1792364433.77283,
+      "second_of_minute": 33.77283000946045,
+      "latency_s": 86.5660810470581,
+      "latency_file_mtime_s": 86.39811587333679
+    },
+    {
+      "user": "probe-083",
+      "sent": 1792364438.0121322,
+      "second_of_minute": 38.01213216781616,
+      "latency_s": 82.32776284217834,
+      "latency_file_mtime_s": 82.15887594223022
+    },
+    {
+      "user": "probe-084",
+      "sent": 1792364448.274493,
+      "second_of_minute": 48.27449297904968,
+      "latency_s": 72.06441807746887,
+      "latency_file_mtime_s": 71.89645290374756
+    },
+    {
+      "user": "probe-085",
+      "sent": 1792364461.084096,
+      "second_of_minute": 1.0840959548950195,
+      "latency_s": 119.72157692909241,
+      "latency_file_mtime_s": 119.59372735023499
+    },
+    {
+      "user": "probe-086",
+      "sent": 1792364480.6780539,
+      "second_of_minute": 20.678053855895996,
+      "latency_s": 100.12761902809143,
+      "latency_file_mtime_s": 99.99976944923401
+    },
+    {
+      "user": "probe-087",
+      "sent": 1792364489.542737,
+      "second_of_minute": 29.542737007141113,
+      "latency_s": 91.2621660232544,
+      "latency_file_mtime_s": 91.13506937026978
+    },
+    {
+      "user": "probe-088",
+      "sent": 1792364497.9386828,
+      "second_of_minute": 37.93868279457092,
+      "latency_s": 82.86766004562378,
+      "latency_file_mtime_s": 82.7384889125824
+    },
+    {
+      "user": "probe-089",
+      "sent": 1792364514.018191,
+      "second_of_minute": 54.01819109916687,
+      "latency_s": 66.78748178482056,
+      "latency_file_mtime_s": 66.65963220596313
+    },
+    {
+      "user": "probe-090",
+      "sent": 1792364521.8378491,
+      "second_of_minute": 1.8378491401672363,
+      "latency_s": 118.66134977340698,
+      "latency_file_mtime_s": 118.44011330604553
+    },
+    {
+      "user": "probe-091",
+      "sent": 1792364540.360488,
+      "second_of_minute": 20.360487937927246,
+      "latency_s": 100.13871097564697,
+      "latency_file_mtime_s": 99.91747450828552
+    },
+    {
+      "user": "probe-092",
+      "sent": 1792364549.3607092,
+      "second_of_minute": 29.360709190368652,
+      "latency_s": 91.13848972320557,
+      "latency_file_mtime_s": 90.91725325584412
+    },
+    {
+      "user": "probe-093",
+      "sent": 1792364560.578523,
+      "second_of_minute": 40.57852292060852,
+      "latency_s": 79.92169904708862,
+      "latency_file_mtime_s": 79.69888210296631
+    },
+    {
+      "user": "probe-094",
+      "sent": 1792364571.618583,
+      "second_of_minute": 51.61858296394348,
+      "latency_s": 68.88163900375366,
+      "latency_file_mtime_s": 68.65882205963135
+    },
+    {
+      "user": "probe-095",
+      "sent": 1792364587.570241,
+      "second_of_minute": 7.5702409744262695,
+      "latency_s": 112.64276194572449,
+      "latency_file_mtime_s": 112.60360550880432
+    },
+    {
+      "user": "probe-096",
+      "sent": 1792364596.352536,
+      "second_of_minute": 16.35253596305847,
+      "latency_s": 103.86115002632141,
+      "latency_file_mtime_s": 103.82091236114502
+    },
+    {
+      "user": "probe-097",
+      "sent": 1792364605.0539908,
+      "second_of_minute": 25.053990840911865,
+      "latency_s": 95.15901207923889,
+      "latency_file_mtime_s": 95.11985564231873
+    },
+    {
+      "user": "probe-098",
+      "sent": 1792364617.4224792,
+      "second_of_minute": 37.42247915267944,
+      "latency_s": 82.79120683670044,
+      "latency_file_mtime_s": 82.75096917152405
+    },
+    {
+      "user": "probe-099",
+      "sent": 1792364639.5527732,
+      "second_of_minute": 59.552773237228394,
+      "latency_s": 60.661391735076904,
+      "latency_file_mtime_s": 60.62070083618164
+    },
+    {
+      "user": "probe-100",
+      "sent": 1792364650.91081,
+      "second_of_minute": 10.910809993743896,
+      "latency_s": 109.48467898368835,
+      "latency_file_mtime_s": 109.25320148468018
+    },
+    {
+      "user": "probe-101",
+      "sent": 1792364660.4047732,
+      "second_of_minute": 20.404773235321045,
+      "latency_s": 99.99007678031921,
+      "latency_file_mtime_s": 99.75663661956787
+    },
+    {
+      "user": "probe-102",
+      "sent": 1792364667.191342,
+      "second_of_minute": 27.19134211540222,
+      "latency_s": 93.1991548538208,
+      "latency_file_mtime_s": 92.97007536888123
+    },
+    {
+      "user": "probe-103",
+      "sent": 1792364687.6391292,
+      "second_of_minute": 47.63912916183472,
+      "latency_s": 72.7548418045044,
+      "latency_file_mtime_s": 72.52295064926147
+    },
+    {
+      "user": "probe-104",
+      "sent": 1792364697.3503098,
+      "second_of_minute": 57.3503098487854,
+      "latency_s": 63.04018712043762,
+      "latency_file_mtime_s": 62.81110763549805
+    },
+    {
+      "user": "probe-105",
+      "sent": 1792364708.612422,
+      "second_of_minute": 8.612421989440918,
+      "latency_s": 112.19788718223572,
+      "latency_file_mtime_s": 112.07495021820068
+    },
+    {
+      "user": "probe-106",
+      "sent": 1792364717.397857,
+      "second_of_minute": 17.397856950759888,
+      "latency_s": 103.41245222091675,
+      "latency_file_mtime_s": 103.28951525688171
+    },
+    {
+      "user": "probe-107",
+      "sent": 1792364727.2676868,
+      "second_of_minute": 27.26768684387207,
+      "latency_s": 93.54406499862671,
+      "latency_file_mtime_s": 93.41979050636292
+    },
+    {
+      "user": "probe-108",
+      "sent": 1792364737.163198,
+      "second_of_minute": 37.16319799423218,
+      "latency_s": 83.64915299415588,
+      "latency_file_mtime_s": 83.52574038505554
+    },
+    {
+      "user": "probe-109",
+      "sent": 1792364758.8412879,
+      "second_of_minute": 58.84128785133362,
+      "latency_s": 61.96902132034302,
+      "latency_file_mtime_s": 61.84608435630798
+    },
+    {
+      "user": "probe-110",
+      "sent": 1792364765.470913,
+      "second_of_minute": 5.470912933349609,
+      "latency_s": 115.35575985908508,
+      "latency_file_mtime_s": 115.22876214981079
+    },
+    {
+      "user": "probe-111",
+      "sent": 1792364774.438425,
+      "second_of_minute": 14.438425064086914,
+      "latency_s": 106.38996005058289,
+      "latency_file_mtime_s": 106.26097750663757
+    },
+    {
+      "user": "probe-112",
+      "sent": 1792364787.678714,
+      "second_of_minute": 27.67871403694153,
+      "latency_s": 93.14967107772827,
+      "latency_file_mtime_s": 93.02068853378296
+    },
+    {
+      "user": "probe-113",
+      "sent": 1792364802.952693,
+      "second_of_minute": 42.95269298553467,
+      "latency_s": 77.87503099441528,
+      "latency_file_mtime_s": 77.74670839309692
+    },
+    {
+      "user": "probe-114",
+      "sent": 1792364810.1284292,
+      "second_of_minute": 50.12842917442322,
+      "latency_s": 70.69995594024658,
+      "latency_file_mtime_s": 70.57097339630127
+    },
+    {
+      "user": "probe-115",
+      "sent": 1792364830.28036,
+      "second_of_minute": 10.280359983444214,
+      "latency_s": 110.48786401748657,
+      "latency_file_mtime_s": 110.41697430610657
+    },
+    {
+      "user": "probe-116",
+      "sent": 1792364841.111872,
+      "second_of_minute": 21.11187195777893,
+      "latency_s": 99.65764713287354,
+      "latency_file_mtime_s": 99.58656930923462
+    },
+    {
+      "user": "probe-117",
+      "sent": 1792364852.63586,
+      "second_of_minute": 32.635859966278076,
+      "latency_s": 88.13309502601624,
+      "latency_file_mtime_s": 88.06146216392517
+    },
+    {
+      "user": "probe-118",
+      "sent": 1792364861.1934772,
+      "second_of_minute": 41.193477153778076,
+      "latency_s": 79.57659864425659,
+      "latency_file_mtime_s": 79.50383758544922
+    },
+    {
+      "user": "probe-119",
+      "sent": 1792364875.533519,
+      "second_of_minute": 55.53351902961731,
+      "latency_s": 65.235435962677,
+      "latency_file_mtime_s": 65.16380310058594
+    }
+  ],
+  "n_probes": 120,
+  "n_seen": 120,
+  "distribution_s": {
+    "min": 60.661391735076904,
+    "p05": 63.91048147678375,
+    "p25": 76.34445184469223,
+    "median": 90.55599987506866,
+    "p75": 103.69821852445602,
+    "p95": 117.77379215955735,
+    "max": 119.72157692909241
+  },
+  "mean_s": 90.62853745023409,
+  "share_within_bound": 0.075,
+  "stop_probe": {
+    "user": "probe-stop",
+    "sent": 1792365020.0044749,
+    "seen_during_idle": false,
+    "latency_s": 340.22991013526917,
+    "after_resume_s": 37.33269906044006,
+    "idle_s": 300.0190269947052
+  },
+  "stop_watch_s": 300,
+  "background": "real-time replay of the 2026-06-01 20:00 archive hour (looped)",
+  "detection": "metrics sink polled every 0.25 s for new part files"
+}

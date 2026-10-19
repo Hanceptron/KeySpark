@@ -1,0 +1,1579 @@
+{
+  "config": {
+    "slice_start": "2026-06-01 20:00",
+    "minutes": 60.0,
+    "runs": 3,
+    "fault_at_fraction": 0.4,
+    "kill_phase_s": [
+      15.0,
+      0.2,
+      30.2
+    ],
+    "retention_ms": 120000,
+    "segment_ms": 20000,
+    "consumer_stop_s": 360,
+    "block_events": 200,
+    "late_age_s": 600,
+    "broker_retention_check_interval_ms": 5000,
+    "spark_ui": "disabled for test jobs (port range); processing unchanged",
+    "events": 55127
+  },
+  "out_of_scope": {
+    "host_sleep": "Not tested: host-sleep scenarios need the author at the machine."
+  },
+  "scenarios": {
+    "none": {
+      "runs": [
+        {
+          "scenario": "none",
+          "run": 0,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "none",
+          "run": 1,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "none",
+          "run": 2,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recall": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "lost": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_spark_log": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "lost_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "precision_all_files": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recovery_s": null,
+        "stable_recovery_s": null,
+        "job_starts_after_fault": null
+      }
+    },
+    "kill_jvm": {
+      "runs": [
+        {
+          "scenario": "kill_jvm",
+          "run": 0,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 1,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 17.631406784057617,
+            "stable_seconds": 17.631406784057617,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 60.11365079879761
+          },
+          "recovery_events": {
+            "seconds": 17.63140344619751,
+            "stable_seconds": 17.63140344619751,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 60.65951919555664
+          },
+          "kill_second_of_minute": 15.043258905410767,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "kill_jvm",
+          "run": 1,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 2,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 0,
+              "not_committed": 1
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 1
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 31.890743732452393,
+            "stable_seconds": 31.890743732452393,
+            "job_starts_after_fault": 2,
+            "longest_commit_gap_s": 60.618032693862915
+          },
+          "recovery_events": {
+            "seconds": 61.23147749900818,
+            "stable_seconds": 61.23147749900818,
+            "job_starts_after_fault": 2,
+            "longest_commit_gap_s": 70.4245252609253
+          },
+          "kill_second_of_minute": 0.35317397117614746,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": [
+            "java.lang.NullPointerException",
+            "java.lang.NullPointerException"
+          ]
+        },
+        {
+          "scenario": "kill_jvm",
+          "run": 2,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 2,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 168,
+              "unreadable": 0,
+              "not_committed": 1
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 168,
+              "unreadable": 1
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 29.329970121383667,
+            "stable_seconds": 29.329970121383667,
+            "job_starts_after_fault": 2,
+            "longest_commit_gap_s": 60.13356280326843
+          },
+          "recovery_events": {
+            "seconds": 10.604526996612549,
+            "stable_seconds": 90.39284062385559,
+            "job_starts_after_fault": 2,
+            "longest_commit_gap_s": 79.78831362724304
+          },
+          "kill_second_of_minute": 30.389225959777832,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": [
+            "java.lang.NullPointerException"
+          ]
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recall": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "lost": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_spark_log": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "lost_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "precision_all_files": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recovery_s": {
+          "mean": 26.284040212631226,
+          "min": 17.631406784057617,
+          "max": 31.890743732452393
+        },
+        "stable_recovery_s": {
+          "mean": 26.284040212631226,
+          "min": 17.631406784057617,
+          "max": 31.890743732452393
+        },
+        "job_starts_after_fault": {
+          "mean": 1.6666666666666667,
+          "min": 1.0,
+          "max": 2.0
+        }
+      }
+    },
+    "kafka_restart": {
+      "runs": [
+        {
+          "scenario": "kafka_restart",
+          "run": 0,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 165,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 165,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 10.418140172958374,
+            "stable_seconds": 10.418140172958374,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 60.55575776100159
+          },
+          "recovery_events": {
+            "seconds": 40.506019592285156,
+            "stable_seconds": 40.506019592285156,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 119.5893816947937
+          },
+          "broker_down_s": 3.36972713470459,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "kafka_restart",
+          "run": 1,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 9.715191125869751,
+            "stable_seconds": 9.715191125869751,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 60.53024911880493
+          },
+          "recovery_events": {
+            "seconds": 39.868791341781616,
+            "stable_seconds": 39.868791341781616,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 119.6078519821167
+          },
+          "broker_down_s": 3.4599530696868896,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "kafka_restart",
+          "run": 2,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 60,
+              "precision": 1.0,
+              "recall": 1.0,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 0,
+              "spurious_rows": 0
+            },
+            "archive_events": 55127,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 10.152893304824829,
+            "stable_seconds": 10.152893304824829,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 60.440709590911865
+          },
+          "recovery_events": {
+            "seconds": 40.290929079055786,
+            "stable_seconds": 40.290929079055786,
+            "job_starts_after_fault": 0,
+            "longest_commit_gap_s": 119.6265013217926
+          },
+          "broker_down_s": 3.430142879486084,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recall": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "lost": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_spark_log": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "lost_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "precision_all_files": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "recovery_s": {
+          "mean": 10.095408201217651,
+          "min": 9.715191125869751,
+          "max": 10.418140172958374
+        },
+        "stable_recovery_s": {
+          "mean": 10.095408201217651,
+          "min": 9.715191125869751,
+          "max": 10.418140172958374
+        },
+        "job_starts_after_fault": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "offsets_lost": {
+      "runs": [
+        {
+          "scenario": "offsets_lost",
+          "run": 0,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 1,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50653,
+            "lost": 4474,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 153,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50653,
+            "lost": 4474,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 153,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 5.3614888191223145,
+            "stable_seconds": 5.3614888191223145,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 375.8255228996277
+          },
+          "recovery_events": {
+            "seconds": 5.361482858657837,
+            "stable_seconds": 5.361482858657837,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 406.30828642845154
+          },
+          "consumer_down_s": 360.30643701553345,
+          "offsets_deleted_by_retention": 25698,
+          "job_log_data_loss_warnings": 4,
+          "query_errors": []
+        },
+        {
+          "scenario": "offsets_lost",
+          "run": 1,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 1,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50667,
+            "lost": 4460,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 152,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50667,
+            "lost": 4460,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 152,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 6.302823543548584,
+            "stable_seconds": 6.302823543548584,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 376.4212429523468
+          },
+          "recovery_events": {
+            "seconds": 6.302803993225098,
+            "stable_seconds": 6.302803993225098,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 406.4004530906677
+          },
+          "consumer_down_s": 360.21825408935547,
+          "offsets_deleted_by_retention": 25698,
+          "job_log_data_loss_warnings": 4,
+          "query_errors": []
+        },
+        {
+          "scenario": "offsets_lost",
+          "run": 2,
+          "events_sent": 55127,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 1,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50664,
+            "lost": 4463,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 154,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 57,
+              "correct": 55,
+              "precision": 0.9649122807017544,
+              "recall": 0.9166666666666666,
+              "missing_windows": 3,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 50664,
+            "lost": 4463,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 154,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 56,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": {
+            "seconds": 5.227529287338257,
+            "stable_seconds": 5.227529287338257,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 375.53102803230286
+          },
+          "recovery_events": {
+            "seconds": 5.227530002593994,
+            "stable_seconds": 5.227530002593994,
+            "job_starts_after_fault": 1,
+            "longest_commit_gap_s": 405.2338020801544
+          },
+          "consumer_down_s": 360.1587131023407,
+          "offsets_deleted_by_retention": 25698,
+          "job_log_data_loss_warnings": 4,
+          "query_errors": []
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 0.9649122807017544,
+          "min": 0.9649122807017544,
+          "max": 0.9649122807017544
+        },
+        "recall": {
+          "mean": 0.9166666666666666,
+          "min": 0.9166666666666666,
+          "max": 0.9166666666666666
+        },
+        "lost": {
+          "mean": 4465.666666666667,
+          "min": 4460.0,
+          "max": 4474.0
+        },
+        "duplicated_spark_log": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "lost_all_files": {
+          "mean": 4465.666666666667,
+          "min": 4460.0,
+          "max": 4474.0
+        },
+        "precision_all_files": {
+          "mean": 0.9649122807017544,
+          "min": 0.9649122807017544,
+          "max": 0.9649122807017544
+        },
+        "recovery_s": {
+          "mean": 5.630613883336385,
+          "min": 5.227529287338257,
+          "max": 6.302823543548584
+        },
+        "stable_recovery_s": {
+          "mean": 5.630613883336385,
+          "min": 5.227529287338257,
+          "max": 6.302823543548584
+        },
+        "job_starts_after_fault": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      }
+    },
+    "duplicates": {
+      "runs": [
+        {
+          "scenario": "duplicates",
+          "run": 0,
+          "events_sent": 55127,
+          "resent": 200,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 58,
+              "precision": 0.9666666666666667,
+              "recall": 0.9666666666666667,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 58,
+              "precision": 0.9666666666666667,
+              "recall": 0.9666666666666667,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "duplicate_block_age_s": [
+            20.250091075897217,
+            0.4084141254425049
+          ],
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "duplicates",
+          "run": 1,
+          "events_sent": 55127,
+          "resent": 200,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 61,
+              "speed_rows": 61,
+              "correct": 59,
+              "precision": 0.9672131147540983,
+              "recall": 0.9672131147540983,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 168,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 61,
+              "speed_rows": 61,
+              "correct": 59,
+              "precision": 0.9672131147540983,
+              "recall": 0.9672131147540983,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 168,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 62,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "duplicate_block_age_s": [
+            20.24830198287964,
+            0.40662503242492676
+          ],
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "duplicates",
+          "run": 2,
+          "events_sent": 55127,
+          "resent": 200,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 58,
+              "precision": 0.9666666666666667,
+              "recall": 0.9666666666666667,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 165,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 58,
+              "precision": 0.9666666666666667,
+              "recall": 0.9666666666666667,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 2,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 200,
+            "metrics_files": {
+              "files": 165,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "duplicate_block_age_s": [
+            20.250793933868408,
+            0.4091169834136963
+          ],
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 0.966848816029144,
+          "min": 0.9666666666666667,
+          "max": 0.9672131147540983
+        },
+        "recall": {
+          "mean": 0.966848816029144,
+          "min": 0.9666666666666667,
+          "max": 0.9672131147540983
+        },
+        "lost": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_spark_log": {
+          "mean": 200.0,
+          "min": 200.0,
+          "max": 200.0
+        },
+        "duplicated_all_files": {
+          "mean": 200.0,
+          "min": 200.0,
+          "max": 200.0
+        },
+        "lost_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "precision_all_files": {
+          "mean": 0.966848816029144,
+          "min": 0.9666666666666667,
+          "max": 0.9672131147540983
+        },
+        "recovery_s": null,
+        "stable_recovery_s": null,
+        "job_starts_after_fault": null
+      }
+    },
+    "late": {
+      "runs": [
+        {
+          "scenario": "late",
+          "run": 0,
+          "events_sent": 55327,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "late",
+          "run": 1,
+          "events_sent": 55327,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 167,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        },
+        {
+          "scenario": "late",
+          "run": 2,
+          "events_sent": 55327,
+          "resent": 0,
+          "producer_failed": 0,
+          "drained": true,
+          "job_restarts": 0,
+          "spark_log": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0,
+              "not_committed": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0,
+              "not_committed": 0
+            }
+          },
+          "all_files": {
+            "windows": {
+              "truth_windows": 60,
+              "speed_rows": 60,
+              "correct": 59,
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "missing_windows": 0,
+              "duplicate_rows": 0,
+              "wrong_count_rows": 1,
+              "spurious_rows": 0
+            },
+            "archive_events": 55327,
+            "lost": 0,
+            "duplicated": 0,
+            "metrics_files": {
+              "files": 166,
+              "unreadable": 0
+            },
+            "events_files": {
+              "files": 61,
+              "unreadable": 0
+            }
+          },
+          "recovery_metrics": null,
+          "recovery_events": null,
+          "job_log_data_loss_warnings": 0,
+          "query_errors": []
+        }
+      ],
+      "summary": {
+        "precision": {
+          "mean": 0.9833333333333333,
+          "min": 0.9833333333333333,
+          "max": 0.9833333333333333
+        },
+        "recall": {
+          "mean": 0.9833333333333333,
+          "min": 0.9833333333333333,
+          "max": 0.9833333333333333
+        },
+        "lost": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_spark_log": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "duplicated_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "lost_all_files": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "precision_all_files": {
+          "mean": 0.9833333333333333,
+          "min": 0.9833333333333333,
+          "max": 0.9833333333333333
+        },
+        "recovery_s": null,
+        "stable_recovery_s": null,
+        "job_starts_after_fault": null
+      }
+    }
+  }
+}

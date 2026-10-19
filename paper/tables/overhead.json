@@ -1,0 +1,55 @@
+{
+  "active_replay": {
+    "spark_jvm": {
+      "samples": 1548,
+      "cpu_percent_mean": 2.393768175648547,
+      "cpu_percent_peak": 414.90354362323495,
+      "memory_mib_mean": 810.1234657622739,
+      "memory_mib_peak": 888.453125
+    },
+    "kafka_container": {
+      "samples": 3254,
+      "cpu_percent_mean": 2.567443146896128,
+      "cpu_percent_peak": 73.83,
+      "memory_mib_mean": 439.84511370620777,
+      "memory_mib_peak": 665.8
+    },
+    "seconds": 1627.4726400375366
+  },
+  "idle": {
+    "spark_jvm": {
+      "samples": 571,
+      "cpu_percent_mean": 0.41019860187254703,
+      "cpu_percent_peak": 10.50438618659718,
+      "memory_mib_mean": 785.5175131348511,
+      "memory_mib_peak": 786.640625
+    },
+    "kafka_container": {
+      "samples": 1200,
+      "cpu_percent_mean": 1.1306333333333334,
+      "cpu_percent_peak": 8.69,
+      "memory_mib_mean": 729.1068333333333,
+      "memory_mib_peak": 754.8
+    },
+    "seconds": 600.0160081386566
+  },
+  "host_context": {
+    "host_context_start": {
+      "spark_jvms": 1,
+      "lab_brokers": [
+        "keyspark-lab-lat"
+      ]
+    },
+    "host_context_end": {
+      "spark_jvms": 1,
+      "lab_brokers": [
+        "keyspark-lab-lat"
+      ]
+    }
+  },
+  "notes": {
+    "method": "ps cputime deltas and RSS of the Spark JVM; docker stats CPUPerc and MemUsage of the private Kafka container; one sample per second",
+    "out_of_scope": "The capture agent's own CPU and memory need the author at the machine (no-author-time variant) and were not measured.",
+    "docker_vm": "docker stats reports the container inside Docker Desktop's VM; the VM's own overhead is not attributed."
+  }
+}

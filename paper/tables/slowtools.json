@@ -1,0 +1,635 @@
+{
+  "config": {
+    "seed": 42,
+    "n_repeats": 10,
+    "tau": 0.8,
+    "min_windows": 2,
+    "min_window_events": 5,
+    "freeze": "2026-06-18",
+    "tool_sessions": 4,
+    "tool_session_minutes": 60,
+    "run_lengths": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "tool_session_rule": "a generated tool session counts as one day"
+  },
+  "tools_documented": [
+    {
+      "tool": "Mouse Jiggler (arkane-systems)",
+      "platform": "Windows only (.NET desktop runtime)",
+      "source": "https://github.com/arkane-systems/mousejiggler",
+      "read_at_commit": "c6e60d47e9a9eb3fbc53ba1878bf091b40468547",
+      "default_interval_s": 60,
+      "randomisation": "optional random timer (-r, default off): each interval a whole number of seconds uniform on 1..period (Random.Shared.Next(1, JigglePeriod + 1) in MainForm.cs)",
+      "event_types": [
+        "move (relative, SendInput MOUSEEVENTF_MOVE)"
+      ],
+      "geometry": "Normal (default): (+4d, +4d) then (-4d, -4d), distance d = 1 (max 120); Linear: (+-4d, 0); Circle: 8-step octagon; Zen: (0, 0)",
+      "other": "skips a tick if the user moved the mouse since the last jiggle; also calls SetThreadExecutionState (Helpers.StayAwake)",
+      "generator_variant": [
+        "jiggler_default",
+        "jiggler_random"
+      ]
+    },
+    {
+      "tool": "Caffeine (Zhorn Software)",
+      "platform": "Windows only (a separate Mac app of the same name is unrelated)",
+      "source": "https://www.zhornsoftware.co.uk/caffeine/",
+      "default_interval_s": 59,
+      "randomisation": "none documented; the interval is the first command-line number",
+      "event_types": [
+        "key_up (F15) by default",
+        "key_down + key_up with -keypress",
+        "none with -allowss or -stes (SetThreadExecutionState only)"
+      ],
+      "geometry": "none (keyboard only); -key:xx changes the virtual key, -useshift uses Shift",
+      "generator_variant": [
+        "keep_awake_default"
+      ]
+    },
+    {
+      "tool": "Jiggler (Stick Software)",
+      "platform": "macOS",
+      "source": "https://github.com/bhaller/Jiggler",
+      "read_at_commit": "db2f9396ea6f3f328671e66034f0a3a8c7886ce3",
+      "default_interval_s": 300,
+      "randomisation": "fixed period (JiggleTime default 5 minutes; JiggleSeconds minimum 5 s); by default jiggles only after that much idle time",
+      "event_types": [
+        "move (absolute, CGEventPost at kCGHIDEventTap)",
+        "click down/up with the click style",
+        "none with the Zen style (IOPMAssertion only)"
+      ],
+      "geometry": "standard style (default): 35 moves scheduled 10 ms apart, each the current position plus a uniform integer offset of up to JiggleDistance^2 + 10 = 14 px per axis (default distance 2), kept within 28 px of the last user position",
+      "other": "not when the screen is locked (default); declares user activity with an IOPMAssertion on every jiggle",
+      "generator_variant": [
+        "mac_jiggler_default"
+      ]
+    },
+    {
+      "tool": "KeepingYouAwake / caffeinate (macOS)",
+      "platform": "macOS",
+      "source": "https://github.com/newmarcel/KeepingYouAwake",
+      "read_at_commit": "2be93dd7f390b23fbca934ff3b1ac03468a80077",
+      "default_interval_s": null,
+      "randomisation": "not applicable",
+      "event_types": [],
+      "geometry": "none: a wrapper around Apple's caffeinate power assertion, so it emits no input events and no input-based detector can see it",
+      "generator_variant": []
+    }
+  ],
+  "released_forest_1min": {
+    "jiggler_default": {
+      "events": 240,
+      "events_per_minute": 1.0,
+      "wall_clock_minutes": 240,
+      "active_minutes": 240,
+      "scored_minutes": 0,
+      "scored_share": 0.0,
+      "detected_at_0.5": 0,
+      "detected_at_0.8": 0,
+      "detection_rate_at_0.5": null,
+      "sessions_flagged": 0
+    },
+    "jiggler_random": {
+      "events": 477,
+      "events_per_minute": 1.9875,
+      "wall_clock_minutes": 240,
+      "active_minutes": 243,
+      "scored_minutes": 1,
+      "scored_share": 0.004166666666666667,
+      "detected_at_0.5": 1,
+      "detected_at_0.8": 1,
+      "detection_rate_at_0.5": 1.0,
+      "sessions_flagged": 0
+    },
+    "keep_awake_default": {
+      "events": 244,
+      "events_per_minute": 1.0166666666666666,
+      "wall_clock_minutes": 240,
+      "active_minutes": 240,
+      "scored_minutes": 0,
+      "scored_share": 0.0,
+      "detected_at_0.5": 0,
+      "detected_at_0.8": 0,
+      "detection_rate_at_0.5": null,
+      "sessions_flagged": 0
+    },
+    "mac_jiggler_default": {
+      "events": 663,
+      "events_per_minute": 2.7625,
+      "wall_clock_minutes": 240,
+      "active_minutes": 48,
+      "scored_minutes": 48,
+      "scored_share": 0.2,
+      "detected_at_0.5": 0,
+      "detected_at_0.8": 0,
+      "detection_rate_at_0.5": 0.0,
+      "sessions_flagged": 0
+    }
+  },
+  "baseline_1min_day_level": {
+    "false_alarms": 2,
+    "genuine_days": 22,
+    "detected": 3,
+    "automation_days": 4,
+    "genuine_windows": 3649,
+    "genuine_window_fpr_at_0.5": 0.001644286105782406,
+    "genuine_window_fpr_at_0.8": 0.001644286105782406
+  },
+  "option_a_5min": {
+    "n_folds": 4,
+    "kinds": [
+      "jiggler",
+      "typer",
+      "keep_awake",
+      "clicker",
+      "jiggler_default",
+      "jiggler_random",
+      "keep_awake_default",
+      "mac_jiggler_default"
+    ],
+    "stratified": {
+      "fold_f1": {
+        "mean": 0.9831919735523826,
+        "std": 0.01066280605263911
+      },
+      "fold_roc_auc": {
+        "mean": 0.9998424919157507,
+        "std": 0.0001975578977821145
+      },
+      "recall_by_kind": {
+        "jiggler": 1.0,
+        "typer": 1.0,
+        "keep_awake": 0.9800000000000001,
+        "clicker": 1.0,
+        "jiggler_default": 1.0,
+        "jiggler_random": 1.0,
+        "keep_awake_default": 1.0,
+        "mac_jiggler_default": 1.0
+      },
+      "genuine_fpr_at_0.5": 0.011504424778761062,
+      "genuine_fpr_at_0.8": 0.00344149459193707,
+      "n_folds_total": 40
+    },
+    "windows": {
+      "genuine": 1017,
+      "jiggler": 46,
+      "typer": 46,
+      "keep_awake": 45,
+      "clicker": 46,
+      "jiggler_default": 44,
+      "jiggler_random": 48,
+      "keep_awake_default": 44,
+      "mac_jiggler_default": 48
+    },
+    "per_tool": {
+      "jiggler_default": {
+        "wall_clock_windows": 48,
+        "scored_windows": 44,
+        "scored_share": 0.9166666666666666,
+        "recall_in_training_stratified": 1.0,
+        "recall_held_out_loko": 1.0,
+        "loko_auc": 0.9746376811594204,
+        "recall_paper_synthetic_only": 1.0,
+        "sessions_flagged_stratified_seed0": 4,
+        "sessions_flagged_loko": 0
+      },
+      "jiggler_random": {
+        "wall_clock_windows": 48,
+        "scored_windows": 48,
+        "scored_share": 1.0,
+        "recall_in_training_stratified": 1.0,
+        "recall_held_out_loko": 1.0,
+        "loko_auc": 0.996376811594203,
+        "recall_paper_synthetic_only": 1.0,
+        "sessions_flagged_stratified_seed0": 4,
+        "sessions_flagged_loko": 4
+      },
+      "keep_awake_default": {
+        "wall_clock_windows": 48,
+        "scored_windows": 44,
+        "scored_share": 0.9166666666666666,
+        "recall_in_training_stratified": 1.0,
+        "recall_held_out_loko": 1.0,
+        "loko_auc": 0.9746376811594204,
+        "recall_paper_synthetic_only": 1.0,
+        "sessions_flagged_stratified_seed0": 4,
+        "sessions_flagged_loko": 0
+      },
+      "mac_jiggler_default": {
+        "wall_clock_windows": 48,
+        "scored_windows": 48,
+        "scored_share": 1.0,
+        "recall_in_training_stratified": 1.0,
+        "recall_held_out_loko": 0.2916666666666667,
+        "loko_auc": 0.9680706521739131,
+        "recall_paper_synthetic_only": 0.0,
+        "sessions_flagged_stratified_seed0": 4,
+        "sessions_flagged_loko": 3
+      }
+    },
+    "loko": {
+      "jiggler": {
+        "accuracy": 0.9782608695652174,
+        "precision": 0.8679245283018868,
+        "recall": 1.0,
+        "f1": 0.9292929292929293,
+        "roc_auc": 0.9910207939508506,
+        "tn": 269,
+        "fp": 7,
+        "fn": 0,
+        "tp": 46,
+        "n_test": 322
+      },
+      "typer": {
+        "accuracy": 0.9782608695652174,
+        "precision": 0.8679245283018868,
+        "recall": 1.0,
+        "f1": 0.9292929292929293,
+        "roc_auc": 0.9964555765595463,
+        "tn": 269,
+        "fp": 7,
+        "fn": 0,
+        "tp": 46,
+        "n_test": 322
+      },
+      "keep_awake": {
+        "accuracy": 0.9595015576323987,
+        "precision": 0.8478260869565217,
+        "recall": 0.8666666666666667,
+        "f1": 0.8571428571428571,
+        "roc_auc": 0.9876811594202899,
+        "tn": 269,
+        "fp": 7,
+        "fn": 6,
+        "tp": 39,
+        "n_test": 321
+      },
+      "clicker": {
+        "accuracy": 0.968944099378882,
+        "precision": 0.9090909090909091,
+        "recall": 0.8695652173913043,
+        "f1": 0.8888888888888888,
+        "roc_auc": 0.9927536231884058,
+        "tn": 272,
+        "fp": 4,
+        "fn": 6,
+        "tp": 40,
+        "n_test": 322
+      },
+      "jiggler_default": {
+        "accuracy": 0.978125,
+        "precision": 0.8627450980392157,
+        "recall": 1.0,
+        "f1": 0.9263157894736842,
+        "roc_auc": 0.9746376811594204,
+        "tn": 269,
+        "fp": 7,
+        "fn": 0,
+        "tp": 44,
+        "n_test": 320
+      },
+      "jiggler_random": {
+        "accuracy": 0.9783950617283951,
+        "precision": 0.8727272727272727,
+        "recall": 1.0,
+        "f1": 0.9320388349514563,
+        "roc_auc": 0.996376811594203,
+        "tn": 269,
+        "fp": 7,
+        "fn": 0,
+        "tp": 48,
+        "n_test": 324
+      },
+      "keep_awake_default": {
+        "accuracy": 0.978125,
+        "precision": 0.8627450980392157,
+        "recall": 1.0,
+        "f1": 0.9263157894736842,
+        "roc_auc": 0.9746376811594204,
+        "tn": 269,
+        "fp": 7,
+        "fn": 0,
+        "tp": 44,
+        "n_test": 320
+      },
+      "mac_jiggler_default": {
+        "accuracy": 0.8734567901234568,
+        "precision": 0.6666666666666666,
+        "recall": 0.2916666666666667,
+        "f1": 0.4057971014492754,
+        "roc_auc": 0.9680706521739131,
+        "tn": 269,
+        "fp": 7,
+        "fn": 34,
+        "tp": 14,
+        "n_test": 324
+      }
+    },
+    "loko_mean_f1_generator_kinds": 0.9011544011544012,
+    "day_level": {
+      "false_alarms": 0,
+      "genuine_days": 22,
+      "detected": 3,
+      "automation_days": 4,
+      "genuine_windows": 1017,
+      "genuine_window_fpr_at_0.5": 0.008849557522123894,
+      "genuine_window_fpr_at_0.8": 0.0029498525073746312
+    },
+    "day_level_paper_synthetic_only": {
+      "false_alarms": 0,
+      "genuine_days": 22,
+      "detected": 3,
+      "automation_days": 4,
+      "genuine_windows": 1017,
+      "genuine_window_fpr_at_0.5": 0.00983284169124877,
+      "genuine_window_fpr_at_0.8": 0.0019665683382497543
+    }
+  },
+  "option_b_key_class": {
+    "genuine_key_events": 450473,
+    "genuine_key_class_counts": {
+      "letter": 278214,
+      "space": 55180,
+      "modifier": 32044,
+      "correction": 28861,
+      "nav": 22704,
+      "tab": 11611,
+      "enter": 8206,
+      "punct": 7563,
+      "digit": 4276,
+      "other": 1814
+    },
+    "genuine_function_key_events": 0,
+    "genuine_minutes": 3729,
+    "genuine_minutes_with_key_events": 3000,
+    "genuine_minutes_with_function_key": 0,
+    "genuine_scored_windows_fkey_positive": 0,
+    "synthetic_windows_fkey_positive_by_kind": {
+      "jiggler": 19,
+      "typer": 103,
+      "keep_awake": 20,
+      "clicker": 131
+    },
+    "synthetic_windows_by_kind": {
+      "jiggler": 142,
+      "typer": 213,
+      "keep_awake": 79,
+      "clicker": 211
+    },
+    "forest_1min": {
+      "seven": {
+        "gss": {
+          "f1": {
+            "mean": 0.9823618517933665,
+            "std": 0.008625042912747335
+          },
+          "roc_auc": {
+            "mean": 0.9994293192247152,
+            "std": 0.0004685573707962945
+          }
+        },
+        "stratified": {
+          "fold_f1": {
+            "mean": 0.9881523501743856,
+            "std": 0.009760330425156678
+          },
+          "fold_roc_auc": {
+            "mean": 0.9995456242993004,
+            "std": 0.0004443518231118449
+          },
+          "recall_by_kind": {
+            "jiggler": 1.0,
+            "typer": 0.9906103286384976,
+            "keep_awake": 1.0,
+            "clicker": 0.9725118483412324
+          },
+          "genuine_fpr_at_0.5": 0.0020005480953685937,
+          "genuine_fpr_at_0.8": 0.0015620718004932858,
+          "n_folds_total": 40
+        },
+        "loko": {
+          "jiggler": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "tn": 964,
+            "fp": 0,
+            "fn": 0,
+            "tp": 142,
+            "n_test": 1106
+          },
+          "typer": {
+            "accuracy": 0.8190314358538657,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "roc_auc": 0.9940194416846863,
+            "tn": 964,
+            "fp": 0,
+            "fn": 213,
+            "tp": 0,
+            "n_test": 1177
+          },
+          "keep_awake": {
+            "accuracy": 0.9424736337488016,
+            "precision": 1.0,
+            "recall": 0.24050632911392406,
+            "f1": 0.3877551020408163,
+            "roc_auc": 0.9685513945060139,
+            "tn": 964,
+            "fp": 0,
+            "fn": 60,
+            "tp": 19,
+            "n_test": 1043
+          },
+          "clicker": {
+            "accuracy": 0.8723404255319149,
+            "precision": 1.0,
+            "recall": 0.2890995260663507,
+            "f1": 0.4485294117647059,
+            "roc_auc": 0.9944740516410691,
+            "tn": 964,
+            "fp": 0,
+            "fn": 150,
+            "tp": 61,
+            "n_test": 1175
+          }
+        },
+        "loko_mean_f1": 0.45907112845138054
+      },
+      "eight": {
+        "gss": {
+          "f1": {
+            "mean": 0.9843781045952614,
+            "std": 0.00736557298220285
+          },
+          "roc_auc": {
+            "mean": 0.999506289510928,
+            "std": 0.0005125424932196285
+          }
+        },
+        "stratified": {
+          "fold_f1": {
+            "mean": 0.9886718451870973,
+            "std": 0.008659185869914016
+          },
+          "fold_roc_auc": {
+            "mean": 0.9996058730537793,
+            "std": 0.0003793332269911991
+          },
+          "recall_by_kind": {
+            "jiggler": 1.0,
+            "typer": 0.9859154929577464,
+            "keep_awake": 1.0,
+            "clicker": 0.9777251184834125
+          },
+          "genuine_fpr_at_0.5": 0.0018635242532200602,
+          "genuine_fpr_at_0.8": 0.001205809810907098,
+          "n_folds_total": 40
+        },
+        "loko": {
+          "jiggler": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "tn": 964,
+            "fp": 0,
+            "fn": 0,
+            "tp": 142,
+            "n_test": 1106
+          },
+          "typer": {
+            "accuracy": 0.8190314358538657,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "roc_auc": 0.9909804609120838,
+            "tn": 964,
+            "fp": 0,
+            "fn": 213,
+            "tp": 0,
+            "n_test": 1177
+          },
+          "keep_awake": {
+            "accuracy": 0.9424736337488016,
+            "precision": 1.0,
+            "recall": 0.24050632911392406,
+            "f1": 0.3877551020408163,
+            "roc_auc": 0.97207048689532,
+            "tn": 964,
+            "fp": 0,
+            "fn": 60,
+            "tp": 19,
+            "n_test": 1043
+          },
+          "clicker": {
+            "accuracy": 0.916595744680851,
+            "precision": 1.0,
+            "recall": 0.5355450236966824,
+            "f1": 0.6975308641975309,
+            "roc_auc": 0.9947346168216947,
+            "tn": 964,
+            "fp": 0,
+            "fn": 98,
+            "tp": 113,
+            "n_test": 1175
+          }
+        },
+        "loko_mean_f1": 0.5213214915595867,
+        "permutation_importance": {
+          "key_diversity": 0.008579782369623446,
+          "ks_iei_cv": 0.03199757465509343,
+          "move_iei_cv": 0.010426897721578048,
+          "iei_cv": 0.6902509994868756,
+          "step_mean": 0.012981485386162455,
+          "step_cv": 0.6652051222279958,
+          "mouse_fraction": 0.11937713083848703,
+          "fkey_share": 0.012547768640947976
+        }
+      }
+    },
+    "day_rule": {
+      "definition": "flag a day with a run of at least N consecutive one-minute windows that have fewer than 5 events, at least one key event, and only F1-F24 key events",
+      "genuine_false_alarms": {
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "10": 0
+      },
+      "genuine_days": 22,
+      "injected_days_detected": {
+        "1": 3,
+        "3": 3,
+        "5": 0,
+        "10": 0
+      },
+      "injected_days": 4,
+      "injected_longest_run": {
+        "bot-test|2026-06-04": 0,
+        "user-001|2026-05-11": 4,
+        "user-001|2026-05-13": 4,
+        "user-001|2026-05-15": 4
+      },
+      "tool_sessions_detected": {
+        "jiggler_default": {
+          "1": 0,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        },
+        "jiggler_random": {
+          "1": 0,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        },
+        "keep_awake_default": {
+          "1": 4,
+          "3": 4,
+          "5": 4,
+          "10": 4
+        },
+        "mac_jiggler_default": {
+          "1": 0,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "generator_sessions_detected": {
+        "jiggler": {
+          "1": 2,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        },
+        "typer": {
+          "1": 0,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        },
+        "keep_awake": {
+          "1": 1,
+          "3": 1,
+          "5": 0,
+          "10": 0
+        },
+        "clicker": {
+          "1": 0,
+          "3": 0,
+          "5": 0,
+          "10": 0
+        }
+      }
+    }
+  }
+}

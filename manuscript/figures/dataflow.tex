@@ -1,0 +1,104 @@
+% KeySpark data-flow figure. Follows the record, not the services: each stage
+% names the task, the operation applied, and the shape of the data leaving it.
+% The outlined bands use the layer names of the text: capture and ingestion,
+% speed layer, batch layer, serving layer. Edge rates are quoted only where a
+% measured value exists in tables/ (benchmark.json, kafkasweep.json), and each
+% names the path on which it was measured.
+\begin{figure}[H]
+\centering
+\begin{adjustwidth}{-\extralength}{0cm}\resizebox{\linewidth}{!}{\begin{tikzpicture}[
+  >={Stealth[round]},
+  font=\footnotesize,
+  stage/.style={draw, rounded corners=2pt, align=center, thick,
+                minimum height=8mm, minimum width=17mm, inner sep=3pt},
+  store/.style={draw, dashed, align=center, font=\scriptsize\itshape,
+                rounded corners=1pt, minimum height=7mm, inner sep=2pt,
+                fill=black!3},
+  note/.style={font=\scriptsize, align=center, text=black!60},
+  band/.style={draw=black!35, rounded corners=4pt, inner sep=2mm},
+  bandlabel/.style={font=\scriptsize\itshape, text=black!55,
+                    anchor=south west},
+  flow/.style={->, thick},
+  side/.style={->, thick, black!55},
+]
+
+% ---- row 1: capture through persistence --------------------------------
+\node[stage] (capture)  {Capture};
+\node[stage, right=13mm of capture] (ingest)  {Ingest};
+\node[stage, right=27mm of ingest]  (parse)   {Parse};
+\node[stage, right=13mm of parse]   (window)  {Window};
+\node[stage, right=13mm of window]  (persist) {Persist};
+
+\draw[flow] (capture) -- node[above, note] (jsonlab) {JSON\\event} (ingest);
+\draw[flow] (ingest)  -- node[above, note] {byte record}
+                         node[below, note, yshift=-0.5mm]
+                         {Kafka path:\\$4.3{\times}10^{3}$ to\\$1.2{\times}10^{5}$ rows/s\\by batch size} (parse);
+\draw[flow] (parse)   -- node[above, note] (typedlab) {typed\\row} (window);
+\draw[flow] (window)  -- node[above, note] (cntlab) {4 counts\\per minute} (persist);
+
+\node[note, below=1mm of capture]  (capnote) {system event tap\\moves capped 50/s};
+\node[note, below=1mm of ingest]   (ingnote) {Kafka \texttt{events.raw}\\1 partition, keyed};
+\node[note, below=1mm of parse]    (parsenote) {explicit 10-field\\schema};
+\node[note, below=1mm of window]   (winnote) {1-min tumbling\\5\,s watermark};
+\node[note, below=1mm of persist]  (pernote) {append, exactly\\once per commit log};
+
+% ---- the two durable stores --------------------------------------------
+\node[store, below=11mm of window]  (metrics) {\texttt{metrics/}\\per-minute counts};
+\node[store, below=11mm of persist] (events)  {\texttt{events/}\\event archive};
+\draw[side] (persist.south west) to[out=-110, in=0] (metrics.east);
+\draw[side] (persist.east) to[out=-20, in=75] (events.north east);
+
+% ---- row 2: the two consumers of the archive ---------------------------
+\node[stage, below=10mm of metrics] (segment)   {Segment};
+\node[stage, left=13mm of segment]  (featurize) {Featurise};
+\node[stage, left=13mm of featurize](classify)  {Classify};
+\node[stage, left=13mm of classify] (decide)    {Decide};
+
+\node[note, below=1mm of segment]   (segnote) {300\,s idle gap\\sessions, heat maps};
+\node[note, below=1mm of featurize] (featnote) {7 shape features\\drop $<5$ events};
+\node[note, below=1mm of classify]  (clsnote) {random forest\\300 trees};
+\node[note, below=1mm of decide]    (decnote) {$\geq m$ windows\\at $\geq \tau$};
+
+\draw[side] (events.south) to[out=-90, in=0]
+            node[note, right, pos=0.3, xshift=1mm]
+            {full archive,\\$1.28{\times}10^{6}$\,ev/s\\batch read}
+            (segment.east);
+\draw[flow] (segment)   -- node[above, note] (rowlab) {row +\\session id} (featurize);
+\draw[flow] (featurize) -- node[above, note] (featlab) {feature\\row} (classify);
+\draw[flow] (classify)  -- node[above, note] (pautolab) {$P(\text{auto})$\\per window} (decide);
+
+% ---- serving ------------------------------------------------------------
+\node[stage, left=13mm of decide] (serve) {Serve};
+\node[note, below=1mm of serve] (servenote) {FastAPI\\React dashboard};
+\draw[flow] (decide) -- node[above, note] {day\\flag} (serve);
+\draw[side, rounded corners=4pt] (metrics.west) -| ([xshift=7mm]serve.north)
+            node[note, above, pos=0.25] {count rows, JSON on read};
+
+% ---- the layer bands ----------------------------------------------------
+\node[band, fit=(capture)(ingest)(capnote)(ingnote)(jsonlab)] (captureband) {};
+\node[bandlabel] at (captureband.north west) {Capture and ingestion};
+\node[band, fit=(parse)(window)(persist)(parsenote)(winnote)(pernote)
+             (typedlab)(cntlab)]
+     (speedband) {};
+\node[bandlabel] at (speedband.north west) {Speed layer};
+\node[band, fit=(decide)(classify)(featurize)(segment)
+             (decnote)(clsnote)(featnote)(segnote)(pautolab)(featlab)(rowlab)]
+     (batchband) {};
+\node[bandlabel] at (batchband.north west) {Batch layer};
+\node[band, fit=(serve)(servenote)] (serveband) {};
+\node[bandlabel] at (serveband.north west) {Serving layer};
+
+\end{tikzpicture}}\end{adjustwidth}
+\caption{The KeySpark data flow, following one input event from the operating
+system to the dashboard. Grey rounded outlines group the stages into capture
+and ingestion, the speed layer, the batch layer, and the serving layer. Solid
+arrows carry the record and are labelled with its shape at that point, together
+with the measured rate where one exists (Section~\ref{sec:throughput}); the
+streaming rate was measured on the deployed path, from a Kafka topic into the
+Parquet sinks, over micro-batches of 1,074 to 68,741 rows. Dashed boxes are the two durable stores
+through which the speed layer hands records to the batch and serving layers.
+The upper row turns an unbounded event stream into finalised per-minute counts;
+the lower row consumes the durable archive, where a bounded and fully ordered
+view makes order-dependent analytics and automation scoring correct.}
+\label{fig:dataflow}
+\end{figure}

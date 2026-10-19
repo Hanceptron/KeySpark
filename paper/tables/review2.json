@@ -1,0 +1,402 @@
+{
+ "source": "keyspark_windows.csv",
+ "generator": {
+  "sessions": 16,
+  "minutes_min": 49.5649333338,
+  "minutes_max": 61.5144499997,
+  "minutes_mean": 52.7840645835,
+  "minutes_by_kind": {
+   "jiggler": [
+    50.9340666672,
+    53.3178666671,
+    54.4624833326,
+    51.5541999996
+   ],
+   "typer": [
+    52.1660333335,
+    51.3016166667,
+    51.9477999985,
+    53.4156666676
+   ],
+   "keep_awake": [
+    50.7499666671,
+    61.5144499997,
+    49.5649333338,
+    54.6590333343
+   ],
+   "clicker": [
+    54.2487000008,
+    52.4224166671,
+    51.2323499997,
+    51.0534500003
+   ]
+  },
+  "windows_by_kind": {
+   "jiggler": 142,
+   "typer": 213,
+   "keep_awake": 79,
+   "clicker": 211
+  },
+  "sessions_by_kind": {
+   "jiggler": 4,
+   "typer": 4,
+   "keep_awake": 4,
+   "clicker": 4
+  },
+  "nominal_minutes": 30,
+  "pause_rule": "10% of steps add 3 to 12 base intervals"
+ },
+ "step_cv_zero": {
+  "genuine": {
+   "windows": 3649,
+   "step_cv_zero": 295,
+   "no_movement": 293,
+   "constant_step": 2,
+   "keyboard_only": 255
+  },
+  "synthetic": {
+   "windows": 645,
+   "step_cv_zero": 631,
+   "no_movement": 273,
+   "constant_step": 358,
+   "keyboard_only": 62
+  },
+  "jiggler": {
+   "windows": 142,
+   "step_cv_zero": 131,
+   "no_movement": 0,
+   "constant_step": 131,
+   "keyboard_only": 0
+  },
+  "typer": {
+   "windows": 213,
+   "step_cv_zero": 210,
+   "no_movement": 36,
+   "constant_step": 174,
+   "keyboard_only": 2
+  },
+  "keep_awake": {
+   "windows": 79,
+   "step_cv_zero": 79,
+   "no_movement": 79,
+   "constant_step": 0,
+   "keyboard_only": 60
+  },
+  "clicker": {
+   "windows": 211,
+   "step_cv_zero": 211,
+   "no_movement": 158,
+   "constant_step": 53,
+   "keyboard_only": 0
+  }
+ },
+ "rules": {
+  "step_cv_zero": {
+   "gss": {
+    "mean": 0.726579174,
+    "std": 0.0956855578
+   },
+   "stratified": {
+    "mean": 0.8042921558,
+    "std": 0.039955174
+   }
+  },
+  "no_pointer_movement": {
+   "gss": {
+    "mean": 0.3754539795,
+    "std": 0.2122751207
+   },
+   "stratified": {
+    "mean": 0.4516597516,
+    "std": 0.0388723129
+   }
+  }
+ },
+ "keyboard_only": {
+  "genuine_windows": 3649,
+  "keyboard_only": 255,
+  "share": 0.0698821595,
+  "median_score_keyboard_only": 0.0407397233,
+  "median_score_other": 0.0,
+  "share_of_top1pct_keyboard_only": 0.5135135135,
+  "top1pct_windows": 37
+ },
+ "flagged_genuine": {
+  "threshold": 0.8,
+  "windows": 6,
+  "keyboard_only": 2,
+  "no_movement": 6,
+  "n_events_median": 73.0,
+  "n_events_max": 569,
+  "genuine_n_events_median": 675.0
+ },
+ "session_detection": {
+  "jiggler": {
+   "sessions": 4,
+   "detected": 4,
+   "ci95": [
+    0.3976353644,
+    1.0
+   ],
+   "min_session_recall": 1.0
+  },
+  "typer": {
+   "sessions": 4,
+   "detected": 4,
+   "ci95": [
+    0.3976353644,
+    1.0
+   ],
+   "min_session_recall": 0.9811320755
+  },
+  "keep_awake": {
+   "sessions": 4,
+   "detected": 4,
+   "ci95": [
+    0.3976353644,
+    1.0
+   ],
+   "min_session_recall": 1.0
+  },
+  "clicker": {
+   "sessions": 4,
+   "detected": 4,
+   "ci95": [
+    0.3976353644,
+    1.0
+   ],
+   "min_session_recall": 0.8862745098
+  }
+ },
+ "importance_stratified": {
+  "key_diversity": {
+   "mean": 0.0031616038,
+   "min": 0.0010629087,
+   "max": 0.0054579939
+  },
+  "ks_iei_cv": {
+   "mean": 0.0239335825,
+   "min": 0.0,
+   "max": 0.0415770762
+  },
+  "move_iei_cv": {
+   "mean": 1.43027e-05,
+   "min": -0.0039590849,
+   "max": 0.0053611314
+  },
+  "iei_cv": {
+   "mean": 0.6473733566,
+   "min": 0.600332083,
+   "max": 0.698956295
+  },
+  "step_mean": {
+   "mean": 0.0095755015,
+   "min": 0.0063728582,
+   "max": 0.0134368558
+  },
+  "step_cv": {
+   "mean": 0.6425394392,
+   "min": 0.5992154731,
+   "max": 0.6867025977
+  },
+  "mouse_fraction": {
+   "mean": 0.0784158826,
+   "min": 0.0643824825,
+   "max": 0.0949732079
+  }
+ },
+ "loko_repeated": {
+  "forest/budget_0.01": {
+   "mean_f1": 0.7836482532,
+   "mean_f1_range95": [
+    0.7646262461,
+    0.8032023151
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.9735744477,
+    "typer": 0.8782825239,
+    "keep_awake": 0.3704102705,
+    "clicker": 0.9123257707
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.8124413146,
+    "keep_awake": 0.2487341772,
+    "clicker": 0.8700236967
+   },
+   "fpr_mean": 0.008470838,
+   "threshold_range": [
+    0.0996450163,
+    0.2308803596
+   ]
+  },
+  "forest/fixed_0.5": {
+   "mean_f1": 0.4637247886,
+   "mean_f1_range95": [
+    0.446026953,
+    0.4957700315
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.9933021537,
+    "typer": 0.0002325581,
+    "keep_awake": 0.3838888381,
+    "clicker": 0.4774756043
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.0001173709,
+    "keep_awake": 0.2405063291,
+    "clicker": 0.3168246445
+   },
+   "fpr_mean": 0.0014130711,
+   "threshold_range": [
+    0.5,
+    0.5
+   ]
+  },
+  "forest/seen_max_f1": {
+   "mean_f1": 0.4829475523,
+   "mean_f1_range95": [
+    0.4254899942,
+    0.6075292108
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.9887835697,
+    "typer": 0.0931899579,
+    "keep_awake": 0.3824508836,
+    "clicker": 0.4673657981
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.0651408451,
+    "keep_awake": 0.2405063291,
+    "clicker": 0.3265402844
+   },
+   "fpr_mean": 0.0023396657,
+   "threshold_range": [
+    0.0575304906,
+    0.6514986645
+   ]
+  },
+  "forest/seen_recall_0.95": {
+   "mean_f1": 0.2848805891,
+   "mean_f1_range95": [
+    0.204286636,
+    0.353181829
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.8938117992,
+    "typer": 0.0236547085,
+    "keep_awake": 0.0,
+    "clicker": 0.2220558488
+   },
+   "per_kind_recall": {
+    "jiggler": 0.8353873239,
+    "typer": 0.0247652582,
+    "keep_awake": 0.0,
+    "clicker": 0.1296208531
+   },
+   "fpr_mean": 0.0012235426,
+   "threshold_range": [
+    0.0609528588,
+    0.8976184139
+   ]
+  },
+  "logistic/budget_0.01": {
+   "mean_f1": 0.5501754874,
+   "mean_f1_range95": [
+    0.5251007808,
+    0.5746734075
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.9730569964,
+    "typer": 0.0,
+    "keep_awake": 0.9513151052,
+    "clicker": 0.276329848
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.0,
+    "keep_awake": 0.9962025316,
+    "clicker": 0.1696682464
+   },
+   "fpr_mean": 0.0092134654,
+   "threshold_range": [
+    0.6832241086,
+    0.9085486934
+   ]
+  },
+  "logistic/fixed_0.5": {
+   "mean_f1": 0.5876082358,
+   "mean_f1_range95": [
+    0.5528248098,
+    0.616902464
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.8464927772,
+    "typer": 0.0010712981,
+    "keep_awake": 0.7564776459,
+    "clicker": 0.7463912222
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.0005868545,
+    "keep_awake": 1.0,
+    "clicker": 0.7293838863
+   },
+   "fpr_mean": 0.045740025,
+   "threshold_range": [
+    0.5,
+    0.5
+   ]
+  },
+  "logistic/seen_max_f1": {
+   "mean_f1": 0.5587336339,
+   "mean_f1_range95": [
+    0.5223721651,
+    0.5821737089
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.941466697,
+    "typer": 0.0,
+    "keep_awake": 0.937979052,
+    "clicker": 0.3554887868
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.0,
+    "keep_awake": 0.9990506329,
+    "clicker": 0.2302132701
+   },
+   "fpr_mean": 0.0135392982,
+   "threshold_range": [
+    0.6581805739,
+    0.8904359745
+   ]
+  },
+  "logistic/seen_recall_0.95": {
+   "mean_f1": 0.5633976253,
+   "mean_f1_range95": [
+    0.5349140015,
+    0.5956366266
+   ],
+   "per_kind_f1": {
+    "jiggler": 0.9566587098,
+    "typer": 0.0213426854,
+    "keep_awake": 0.946810358,
+    "clicker": 0.3287787479
+   },
+   "per_kind_recall": {
+    "jiggler": 1.0,
+    "typer": 0.025,
+    "keep_awake": 0.9924050633,
+    "clicker": 0.2075829384
+   },
+   "fpr_mean": 0.0110693533,
+   "threshold_range": [
+    0.0171774919,
+    0.9094846758
+   ]
+  }
+ }
+}
